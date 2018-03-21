@@ -1,10 +1,10 @@
 <?xml version='1.0' encoding='utf-8'?>
 <widget id="com.testphonegap.comforterworm" version="1.0.0" xmlns="http://www.w3.org/ns/widgets" xmlns:gap="http://phonegap.com/ns/1.0">
-    <name>被蟲賺點數</name>
+    <name>Solve9kwCaptcha</name>
     <description>
-        此為棉被蟲開發用於賺9kw點數的app，目前因為被蟲沒錢，只有Android與Windows App版。有錢了再來開發iOS。
+        This app is for solving Captcha and Earn 9kw credit points. Developed by Comforterworm.
     </description>
-    <author email="comforterworm@111.com.tw" href="http://comforterworm.weebly.com">被蟲賺點數</author>
+    <author email="comforterworm@111.com.tw" href="http://comforterworm.weebly.com">Solve9kwCaptcha</author>
     <content src="index.html" />
     <preference name="DisallowOverscroll" value="true" />
     <preference name="android-minSdkVersion" value="14" />
@@ -82,7 +82,7 @@
         <splash height="1280" platform="wp8" src="www/res/screen/wp8/appuse.jpg" width="768" />
     </platform>
     <platform name="windows">
-        <icon height="150" platform="windows" src="www/res/icon/windows/weblogo1.png" width="150" />
+        <icon height="150" platform="windows" src="www/res/icon/windows/Square150x150Logo.scale-100.png" width="150" />
         <icon height="30" platform="windows" src="www/res/icon/windows/Square30x30Logo.scale-100.png" width="30" />
         <icon height="50" platform="windows" src="www/res/icon/windows/StoreLogo.scale-100.png" width="50" />
         <splash height="300" platform="windows" src="www/res/screen/windows/SplashScreen.scale-100.png" width="620" />
@@ -93,7 +93,7 @@
         <icon height="71" platform="windows" src="www/res/icon/windows/Square71x71Logo.scale-100.png" width="71" />
         <icon height="170" platform="windows" src="www/res/icon/windows/weblogo1.png" width="170" />
         <icon height="360" platform="windows" src="www/res/icon/windows/weblogo1.png" width="360" />
-        <icon height="310" platform="windows" src="www/res/icon/windows/weblogo1.png" width="310" />
+        <icon height="310" platform="windows" src="www/res/icon/windows/Square310x310Logo.scale-100.png" width="310" />
         <icon height="150" platform="windows" src="www/res/icon/windows/Wide310x150Logo.scale-100.png" width="310" />
         <icon height="360" platform="windows" src="www/res/icon/windows/weblogo1.png" width="744" />
         <splash height="1920" platform="windows" src="www/res/screen/windows/appuse.png" width="1152" />

@@ -1,6 +1,6 @@
 # Hello World PhoneGap Template [![bitHound Score][bithound-img]][bithound-url]
 
-A PhoneGap Hello World template
+I just replace the PhoneGap Hello World template with my Website...
 
 ## Usage
 
