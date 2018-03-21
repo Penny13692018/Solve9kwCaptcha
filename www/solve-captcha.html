@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="zh_TW">
 <head>
-<title>解驗證碼賺點數</title>
+<title>Solve Captcha</title>
 
 
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
@@ -88,7 +88,7 @@ var STYLE_PREFIX = 'wsite';
 	
 	function initFlyouts(){
 		initPublishedFlyoutMenus(
-			[{"id":"281190080568332722","title":"首頁","url":"index.html","target":"","nav_menu":false,"nonclickable":false},{"id":"610376367591272761","title":"解驗證碼賺點數","url":"solve-captcha.html","target":"","nav_menu":false,"nonclickable":false},{"id":"568530030609992357","title":"Settings (設定)","url":"settings.html","target":"","nav_menu":false,"nonclickable":false},{"id":"875251958585549568","title":"Tutor (&#20013;&#25991;&#25945;&#23416;&#65289;","url":"tutor-2001325991259452341665289.html","target":"","nav_menu":false,"nonclickable":false},{"id":"156628941440020800","title":"聯絡棉被蟲","url":"contact.html","target":"","nav_menu":false,"nonclickable":false}],
+			[{"id":"281190080568332722","title":"Home","url":"index.html","target":"","nav_menu":false,"nonclickable":false},{"id":"610376367591272761","title":"Solve Captcha","url":"solve-captcha.html","target":"","nav_menu":false,"nonclickable":false},{"id":"568530030609992357","title":"Settings","url":"settings.html","target":"","nav_menu":false,"nonclickable":false},{"id":"875251958585549568","title":"Tutor (&#20013;&#25991;&#25945;&#23416;&#65289;","url":"tutor-2001325991259452341665289.html","target":"","nav_menu":false,"nonclickable":false},{"id":"156628941440020800","title":"Contact","url":"contact.html","target":"","nav_menu":false,"nonclickable":false}],
 			"610376367591272761",
 			'',
 			'active',
@@ -124,7 +124,7 @@ var STYLE_PREFIX = 'wsite';
 						href="index.html"
 				class="wsite-menu-item"
 				>
-				首頁
+				Home
 			</a>
 			
 		</li>
@@ -133,7 +133,7 @@ var STYLE_PREFIX = 'wsite';
 						href="solve-captcha.html"
 				class="wsite-menu-item"
 				>
-				解驗證碼賺點數
+				Solve Captcha
 			</a>
 			
 		</li>
@@ -142,7 +142,7 @@ var STYLE_PREFIX = 'wsite';
 						href="settings.html"
 				class="wsite-menu-item"
 				>
-				Settings (設定)
+				Settings
 			</a>
 			
 		</li>
@@ -160,7 +160,7 @@ var STYLE_PREFIX = 'wsite';
 						href="contact.html"
 				class="wsite-menu-item"
 				>
-				聯絡棉被蟲
+				Contact
 			</a>
 			
 		</li>
@@ -186,7 +186,7 @@ var STYLE_PREFIX = 'wsite';
 					
 						
 
-<h2 class="wsite-content-title"><font color="#2a2a2a">系統資訊</font></h2>
+<h2 class="wsite-content-title"><font color="#2a2a2a">System Info</font></h2>
 
 <div><div id="980127208124999843" align="left" style="width: 100%; overflow-y: hidden;" class="wcustomhtml"><div id="guthaben"></div></div>
 
@@ -248,17 +248,21 @@ var STYLE_PREFIX = 'wsite';
 				<td class="wsite-multicol-col" style="width:67.381974248927%; padding:0 15px;">
 					
 						
+
+<h2 class="wsite-content-title"><font size="5">Solve Captcha Here!</font></h2>
+
+
 					
 				</td>				<td class="wsite-multicol-col" style="width:32.618025751073%; padding:0 15px;">
 					
 						
 
 <div><div id="202393467594664587" align="center" style="width: 100%; overflow-y: hidden;" class="wcustomhtml"><a class="wsite-button wsite-button-small wsite-button-highlight" id="captchastart" onclick ="play_sound()">
-<span class="wsite-button-inner"> 開始 </span>
+<span class="wsite-button-inner"> Start </span>
 </a>
 <span>  </span>
 <a class="wsite-button wsite-button-small wsite-button-highlight" id="captchastop">
-<span class="wsite-button-inner"> 停止 </span>
+<span class="wsite-button-inner"> Stop </span>
 </a></div>
 
 
@@ -274,13 +278,13 @@ var STYLE_PREFIX = 'wsite';
 
 <div><div id="975949075765362554" align="left" style="width: 100%; overflow-y: hidden;" class="wcustomhtml"><td width="455" height="350" valign="top">
 		<input type="button" id="captchaskipinteractive" title="Skip" value="SKIP" style="display: none;">
-		<div id="usercaptchaget">現在程式尚未啟動。<br>請按"開始"，在這裡解驗證碼~
+		<div id="usercaptchaget">Sleep mode is active for your account.<br>Please click on start to continue!
 		<br><br>
-- 煩請小心地解驗證碼<br>
-- 煩請認真地輸入正確地驗證解答<br>
-- 拜託不要亂寫QAQ<br>
-- 解不出來的快點跳過 節省您的時間<br>
-- 不要亂搞結果弄壞程式 OTL<br>
+- Solve swiftly and precisely<br>
+- Write correctly. Answers are case-sensitive<br>
+- Do not enter nonsense<br>
+- Use skip if really necessary. (Button skip)<br>
+- Don't use shady methods for solutions<br>
 <br>
 
 		</div>
@@ -307,7 +311,7 @@ var STYLE_PREFIX = 'wsite';
 
 </div>
 
-<div><div id="873202258300453685" align="left" style="width: 100%; overflow-y: hidden;" class="wcustomhtml"><span id="confirmcaptchahtml" style="display: none;">資料: <span id="confirmcaptchadata"></span><br> <input type="button" id="captchatrue" style="background-color:#00FF00;width:115px;height:40px;" value="Correct"> <input type="button" id="captchafalse" style="background-color:#FF3333;width:115px;height:40px;" value="Wrong"><br><br></span></div>
+<div><div id="873202258300453685" align="left" style="width: 100%; overflow-y: hidden;" class="wcustomhtml"><span id="confirmcaptchahtml" style="display: none;">Data: <span id="confirmcaptchadata"></span><br> <input type="button" id="captchatrue" style="background-color:#00FF00;width:115px;height:40px;" value="Correct"> <input type="button" id="captchafalse" style="background-color:#FF3333;width:115px;height:40px;" value="Wrong"><br><br></span></div>
 
 
 
@@ -329,9 +333,9 @@ var STYLE_PREFIX = 'wsite';
 					
 						
 
-<div><div id="974687851487580137" align="left" style="width: 100%; overflow-y: hidden;" class="wcustomhtml"><a class="wsite-button wsite-button-small wsite-button-highlight" id="captchasend1"><span class="wsite-button-inner"> 送出 </span>	</a>
+<div><div id="974687851487580137" align="left" style="width: 100%; overflow-y: hidden;" class="wcustomhtml"><a class="wsite-button wsite-button-small wsite-button-highlight" id="captchasend1"><span class="wsite-button-inner"> OK </span>	</a>
 <a class="wsite-button wsite-button-small wsite-button-highlight" id="captchasend2">
-		<span class="wsite-button-inner"> 送出+停止 </span></a></div>
+		<span class="wsite-button-inner"> OK+Stop </span></a></div>
 
 
 
@@ -344,11 +348,11 @@ var STYLE_PREFIX = 'wsite';
 						
 
 <div><div id="626583895320628472" align="left" style="width: 100%; overflow-y: hidden;" class="wcustomhtml"><a class="wsite-button wsite-button-small wsite-button-highlight" id="captchaskip">
-<span class="wsite-button-inner"> 跳過 </span>
+<span class="wsite-button-inner"> SKIP </span>
 </a> 
 
 <a class="wsite-button wsite-button-small wsite-button-highlight" id="captchasendempty" style="display: none;">
-<span class="wsite-button-inner"> 空的 </span>
+<span class="wsite-button-inner"> Empty </span>
 </a>
 </div>
 
@@ -374,7 +378,7 @@ var STYLE_PREFIX = 'wsite';
 						
 
 <div><div id="611134042281029503" align="left" style="width: 100%; overflow-y: hidden;" class="wcustomhtml"><a class="wsite-button wsite-button-small wsite-button-highlight" onclick="$('#userhistory').show();$('#usertop').hide();$('#userlog').hide();" id="historyname">
-<span class="wsite-button-inner"> 解驗證碼記錄 </span>
+<span class="wsite-button-inner"> History </span>
 </a></div>
 
 
@@ -388,7 +392,7 @@ var STYLE_PREFIX = 'wsite';
 						
 
 <div><div id="568662590735333757" align="left" style="width: 100%; overflow-y: hidden;" class="wcustomhtml"><a class="wsite-button wsite-button-small wsite-button-highlight" onclick="$('#userhistory').hide();$('#usertop').hide();$('#userlog').show();" id="logname">
-<span class="wsite-button-inner"> 系統錯誤記錄 </span>
+<span class="wsite-button-inner"> Log </span>
 </a></div>
 
 
@@ -402,13 +406,13 @@ var STYLE_PREFIX = 'wsite';
 	</table>
 </div></div></div>
 
-<div><div id="187812997517476108" align="left" style="width: 100%; overflow-y: hidden;" class="wcustomhtml"><!-- NOAPP --><div id="userhistory" style="width:222px; height:168px;overflow:auto;"></div><div id="usertop" style="width:222px; height:168px;overflow:auto;display: none;"></div><div id="userlog" style="width:222px; height:168px;overflow:auto;display: none;">沒記錄</div><!-- NOAPP --></div>
+<div><div id="187812997517476108" align="left" style="width: 100%; overflow-y: hidden;" class="wcustomhtml"><!-- NOAPP --><div id="userhistory" style="width:222px; height:168px;overflow:auto;"></div><div id="usertop" style="width:222px; height:168px;overflow:auto;display: none;"></div><div id="userlog" style="width:222px; height:168px;overflow:auto;display: none;">No entry</div><!-- NOAPP --></div>
 
 
 
 </div>
 
-<div class="paragraph"><font color="#555555"><strong>記錄訊息說明</strong></font><br /><font color="00FF00">OK</font><span style="color:rgb(85, 85, 85)">&nbsp;(綠色):<br />您解的是正確的!</span><br /><font color="FF3333">Not</font><span style="color:rgb(85, 85, 85)">&nbsp;(紅色):<br />您解的驗證碼錯誤，拿不到點數QQ</span><br /><span style="color:rgb(85, 85, 85)">? (黑色):<br />&#8203;狀態不明，點數先給您(錯誤會收回)</span></div>
+<div class="paragraph"><font color="#555555"><strong>Return Message</strong></font><br /><font color="00FF00">OK</font><span style="color:rgb(85, 85, 85)">&nbsp;(green):<br />Captcha feedback all right</span><br /><font color="FF3333">Not</font><span style="color:rgb(85, 85, 85)">&nbsp;(red):<br />Captcha feedback not all right</span><br /><span style="color:rgb(85, 85, 85)">? (black):<br />&#8203;Feedback not available yet</span></div>
 			</div>
 		</div>
       </div>
@@ -430,7 +434,7 @@ var STYLE_PREFIX = 'wsite';
     						href="index.html"
     				class="wsite-menu-item"
     				>
-    				首頁
+    				Home
     			</a>
     			
     		</li>
@@ -439,7 +443,7 @@ var STYLE_PREFIX = 'wsite';
     						href="solve-captcha.html"
     				class="wsite-menu-item"
     				>
-    				解驗證碼賺點數
+    				Solve Captcha
     			</a>
     			
     		</li>
@@ -448,7 +452,7 @@ var STYLE_PREFIX = 'wsite';
     						href="settings.html"
     				class="wsite-menu-item"
     				>
-    				Settings (設定)
+    				Settings
     			</a>
     			
     		</li>
@@ -466,7 +470,7 @@ var STYLE_PREFIX = 'wsite';
     						href="contact.html"
     				class="wsite-menu-item"
     				>
-    				聯絡棉被蟲
+    				Contact
     			</a>
     			
     		</li>
