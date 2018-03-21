@@ -12,7 +12,7 @@ function check_device()
 	if(AndroidYes==0)
 	{
 		setCookie('vibration','0','2');
-		alert("只有Android裝置能用震動功能!");
+		alert("Vibration Available Only on Android Device");
 		document.getElementById("vibration").checked = false;
 	}
 		
@@ -35,7 +35,7 @@ function detectmob()
  ){
     setCookie('interactivecaptcha','0','2');
 	setCookie('rc2audio','0','2');
-	alert("目前「我不是機器人驗證」手機版還不能用，煩請靜待更新~");
+	alert("Solving reCaptcha not Available for Mobile Version! Please Wait for Update~");
 	document.getElementById("interactivecaptcha").checked = false;
 	document.getElementById("rc2audio").checked = false;
 	

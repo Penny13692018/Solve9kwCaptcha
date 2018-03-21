@@ -328,7 +328,7 @@ function captchastart(){
 function captchastop(){
 	captchatry = 0;
 	$("#progressbar").progressbar({value: 100});
-	$(".progress-label").text('? 秒');
+	$(".progress-label").text('? seconds');
 	$("#progressbar2").hide();
 
 	$("#captchaskip").prop("disabled",true);
@@ -376,9 +376,9 @@ function captchastop(){
 	}
 
 	if(totalstop == 2){
-		$("#usercaptchatext").html("驗證碼遺失 "+captchaid+" - 程式停止...");
+		$("#usercaptchatext").html("Missing captcha "+captchaid+" - Stop...");
 	}else{
-		$("#usercaptchatext").html("程式停止...");
+		$("#usercaptchatext").html("Stop...");
 	}
 	$("#usercaptchatext").show();
 	stopit = 1;
@@ -477,7 +477,7 @@ function captchaskip(){
 	$("#imagecaptchahtml").hide();
 
 	$("#progressbar").progressbar({value: 100});
-	$(".progress-label").text('? 秒');
+	$(".progress-label").text('? seconds');
 
 	if(skipcaptchaid != ""){
 		statusdata[captchas[skipcaptchaid].speedlevel] = 0;
@@ -618,7 +618,7 @@ function captchasend(){
 		$("#imagecaptchahtml").hide();
 
 		$("#progressbar").progressbar({value: 100});
-		$(".progress-label").text('? 秒');
+		$(".progress-label").text('? seconds');
 
 		$("#captchamath").hide();
 		$("#captchaphrase").hide();
@@ -779,7 +779,7 @@ $(document).ready(function() {
 			clearTimeout(idleTimer);
 
 			idleSecondsCheck = idleSeconds;
-			$("#timertimebad").html('可解驗證碼的時間: '+idleSecondsCheck+' 秒');
+			$("#timertimebad").html('Inactive in '+idleSecondsCheck+' seconds');
 
 			idleTimer = setTimeout(whenUserIdle,idleSeconds*1000);
 		}
@@ -845,7 +845,7 @@ $(document).ready(function() {
 			stopit = 0;
 			captchastart();
 		}else{
-			alert("您沒有在設定中輸入驗證碼.");
+			alert("No apikey found.");
 		}
 	});
 
@@ -993,7 +993,7 @@ $(document).ready(function() {
 		roundTimeout++;
 
 		idleSecondsCheck -= 1;
-		$("#timertimebad").html('可解驗證碼的時間 '+idleSecondsCheck+' 秒');
+		$("#timertimebad").html('Inactive in '+idleSecondsCheck+' seconds');
 
 		if(stopit == 0){
 			for(var i = 0; i <= $("#speedlevel").val(); i++){
@@ -1059,7 +1059,7 @@ $(document).ready(function() {
 
 			var my_progress = parseInt((parseInt(countdown_startwert) / parseInt(captchas[captchaid].timeout)) * 100);
 			$("#progressbar").progressbar({value: my_progress});
-			$(".progress-label").text(countdown_startwert+' 秒');
+			$(".progress-label").text(countdown_startwert+' seconds');
 
 			if(captchanext == 0 || countdown_startwert == 0 || countdown_startwert < 0 || missedcaptcha > 5){
 				captchatry = 0;
@@ -1222,7 +1222,7 @@ $(document).ready(function() {
 							});
 
 							if(captchas[key].textinstructions.length == 0){
-								$("#textthing").html("請輸入驗證碼並送出.<br>\n");
+								$("#textthing").html("Please enter the captcha as text.<br>\n");
 								$("#textthing").show();
 							}
 						}else if(captchas[key].mouse == 1 || captchas[key].multimouse == 1){
@@ -1232,7 +1232,7 @@ $(document).ready(function() {
 							$("#captchasend").hide();
 							if(captchas[key].multimouse == 1){
 								if(captchas[key].textinstructions.length == 0){
-								$("#textthing").html("請輸入驗證碼並點選多次後按送出按鈕<br>\n");
+									$("#textthing").html("Please enter the captcha with multiple clicks and then press OK.<br>\n");
 									$("#textthing").show();
 								}
 
@@ -1240,7 +1240,7 @@ $(document).ready(function() {
 								$("#imagecaptchahtml").html('<img src="'+new_captchapic+'" id="captchaimage" border="0" style="cursor:crosshair;" onclick="getPos(event,\'2\');">');
 							}else{
 								if(captchas[key].textinstructions.length == 0){
-									$("#textthing").html("請輸入驗證碼並送出.<br>\n");
+									$("#textthing").html("Please enter the captcha with one click.<br>\n");
 									$("#textthing").show();
 								}
 
@@ -1258,7 +1258,7 @@ $(document).ready(function() {
 							$("#captchaskipinteractive").show();
 
 							if(captchas[key].textinstructions.length == 0){
-								$("#textthing").html("請輸入驗證碼並送出.<br>\n");
+								$("#textthing").html("Please enter the captcha as like a normal web page, then press OK.<br>\n");
 								$("#textthing").show();
 							}
 
@@ -1367,7 +1367,7 @@ $(document).ready(function() {
 							}
 						}else if(captchas[key].puzzle == 1){
 							if(captchas[key].textinstructions.length == 0){
-								$("#textthing").html("請輸入驗證碼並送出.<br>\n");
+								$("#textthing").html("Please enter the captcha as puzzle and then press OK.<br>\n");
 								$("#textthing").show();
 							}
 
@@ -1380,7 +1380,7 @@ $(document).ready(function() {
 							showPuzzle();
 						}else if(captchas[key].audio == 1){
 							if(captchas[key].textinstructions.length == 0){
-								$("#textthing").html("請仔細聽驗證碼內容後, 將其文字打入框框後送出.<br>\n");
+								$("#textthing").html("Please listen the captcha, enter it as text enter and then press OK.<br>\n");
 								$("#textthing").show();
 							}
 
@@ -1393,7 +1393,7 @@ $(document).ready(function() {
 							$("#audiocaptchahtml").html('<audio id="nextsoundplaycaptcha" autobuffer="autobuffer" autoplay="autoplay" controls="controls" preload="auto"><source src="'+captchas[key].file1.replace('image/png', 'audio/mp3')+'"></audio>');
 						}else if(captchas[key].rotate == 1){
 							if(captchas[key].textinstructions.length == 0){
-								$("#textthing").html("請旋轉圖片以輸入驗證碼，調至正確的方向後送出.<br>\n");
+								$("#textthing").html("Please enter the captcha with rotate the picture and then press OK.<br>\n");
 								$("#textthing").show();
 							}
 
@@ -1418,7 +1418,7 @@ $(document).ready(function() {
 							});
 						}else if(captchas[key].textonly == 1){
 							if(captchas[key].textinstructions.length == 0){
-								$("#textthing").html("請鍵入所看到的文字後送出.<br>\n");
+								$("#textthing").html("Read the text and enter a suitable answer and then press OK.<br>\n");
 								$("#textthing").show();
 							}
 
@@ -1528,17 +1528,17 @@ $(document).ready(function() {
 				var newloadtext = "";
 				if(serverqueue < 10 || usersandboxfull != "" || usersandboxlight != ""){
 					if(serverqueue < 10 && usersandboxfull == "" && serverqueue != ""){
-						newloadtext += "只有 "+serverqueue+" 個驗證碼需要解. <br>\n您可能會等比較久.<br>\n<br>\n";
+						newloadtext += "Only "+serverqueue+" captcha(s) for all worker in our serverqueue. <br>\nIncreased waiting time possible.<br>\n<br>\n";
 					}
 
 					if(usersandboxfull == 1){
-						newloadtext += "<font color=red>警告:</font> <br>\n您於9kw設定使用 Sandbox Mode (Selfonly).<br>\n只能解自己的驗證碼?!<br>\n<br>\n";
+						newloadtext += "<font color=red>Warning:</font> <br>\nUnder Settings (userconfig) is your Sandbox Mode (Selfonly) active.<br>\nOnly own captchas!<br>\n<br>\n";
 					}
 					if(usersandboxlight == 1 && usersandboxfull == ""){
-						newloadtext += "注意: <br>\n您於9kw設定使用Sandbox (Light) Mode (Selfsolve). <br>\n您可能會有機會解到自己送出與別人送出的驗證碼!<br>\n<br>\n";
+						newloadtext += "Note: <br>\nUnder Settings (userconfig) is your Sandbox (Light) Mode (Selfsolve) active. <br>\nOwn and other captchas!<br>\n<br>\n";
 					}
 				}
-				newloadtext += "正在自伺服器中取得驗證碼...";
+				newloadtext += "Captcha is loading...";
 				$("#usercaptchatext").html(newloadtext);
 				$("#usercaptchatext").show();
 			}else{
@@ -1597,10 +1597,10 @@ $(document).ready(function() {
 				created: Date.now(),
 				success: function(data, textStatus, request){
 					if(request.status == 200){
-						$("#useronline_header").html("線上用戶數: "+data.useronline);
-						$("#newuser24h_header").html("24小時內新增的9kw用戶數: "+data.newuser24h);
-						$("#totalcaptcha").html("待解驗證碼總數: "+data.queue);
-						$("#recaptchanumber").html("「我不是機器人驗證」總數: "+data.queueinteractive);
+						$("#useronline_header").html("User online: "+data.useronline);
+						$("#newuser24h_header").html("New users in 24h: "+data.newuser24h);
+						$("#totalcaptcha").html("Captchas Need to be Solved: "+data.queue);
+						$("#recaptchanumber").html("Number of reCaptcha: "+data.queueinteractive);
 						if(data.ninekwclientversion != version){
 							$("#newupdate").show();
 						}
@@ -1623,7 +1623,7 @@ $(document).ready(function() {
 						if(request.status == 200){
 							if(data.credits != ""){
 								credits = data.credits;
-								$("#guthaben").html('您的9kw點數有: '+credits+' 點');
+								$("#guthaben").html('Credits: '+credits);
 							}
 
 							if(data.selfonly == 1){
@@ -1662,7 +1662,7 @@ $(document).ready(function() {
 			stopit = 0;
 			captchastart();
 		}else{
-			alert("您沒有在設定中輸入驗證碼.");
+			alert("No apikey found.");
 		}
 	}
 	//$(document).tooltip({track: true});
@@ -1671,7 +1671,7 @@ $(document).ready(function() {
 	$('#progressbar').css('width', "220px");
 	$('#progressbar').css('height', "30px");
 	$("#progressbar").progressbar({value: 100});
-	$(".progress-label").text('? 秒');
+	$(".progress-label").text('? seconds');
 
 	$("#progressbar2").progressbar({value: 100});
 	$('#progressbar2').css('width', "220px");
