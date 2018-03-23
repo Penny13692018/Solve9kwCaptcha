@@ -1,0 +1,48 @@
+{
+  "name": "cordova-admob-sdk",
+  "version": "0.15.1",
+  "description": "Google AdMob SDK to Cordova.",
+  "scripts": {
+    "version": "sync-package-version --cordova-plugin",
+    "precommit": "lint-staged"
+  },
+  "devDependencies": {
+    "husky": "^0.14.3",
+    "lint-staged": "^6.0.0",
+    "lintspaces-cli": "^0.6.0",
+    "sync-package-version": "0.0.5"
+  },
+  "cordova": {
+    "id": "cordova-admob-sdk",
+    "platforms": [
+      "android",
+      "ios"
+    ]
+  },
+  "repository": "rehy/cordova-admob-sdk",
+  "keywords": [
+    "cordova",
+    "ecosystem:cordova",
+    "cordova-android",
+    "cordova-ios",
+    "ad",
+    "admob",
+    "google",
+    "sdk"
+  ],
+  "author": "Ratson",
+  "license": "MIT",
+  "files": [
+    "*.js",
+    "*.md",
+    "*.xml",
+    "LICENSE",
+    "src",
+    "www"
+  ],
+  "lint-staged": {
+    "plugin.xml": [
+      "lintspaces -d spaces -s 4"
+    ]
+  }
+}

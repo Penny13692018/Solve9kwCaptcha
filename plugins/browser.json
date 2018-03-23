@@ -1,0 +1,82 @@
+{
+    "prepare_queue": {
+        "installed": [],
+        "uninstalled": []
+    },
+    "config_munge": {
+        "files": {}
+    },
+    "installed_plugins": {
+        "cordova-plugin-battery-status": {
+            "PACKAGE_NAME": "com.testphonegap.comforterworm"
+        },
+        "cordova-plugin-camera": {
+            "PACKAGE_NAME": "com.testphonegap.comforterworm"
+        },
+        "cordova-plugin-media-capture": {
+            "PACKAGE_NAME": "com.testphonegap.comforterworm"
+        },
+        "cordova-plugin-console": {
+            "PACKAGE_NAME": "com.testphonegap.comforterworm"
+        },
+        "cordova-plugin-contacts": {
+            "PACKAGE_NAME": "com.testphonegap.comforterworm"
+        },
+        "cordova-plugin-device": {
+            "PACKAGE_NAME": "com.testphonegap.comforterworm"
+        },
+        "cordova-plugin-device-motion": {
+            "PACKAGE_NAME": "com.testphonegap.comforterworm"
+        },
+        "cordova-plugin-device-orientation": {
+            "PACKAGE_NAME": "com.testphonegap.comforterworm"
+        },
+        "cordova-plugin-dialogs": {
+            "PACKAGE_NAME": "com.testphonegap.comforterworm"
+        },
+        "cordova-plugin-file-transfer": {
+            "PACKAGE_NAME": "com.testphonegap.comforterworm"
+        },
+        "cordova-plugin-geolocation": {
+            "PACKAGE_NAME": "com.testphonegap.comforterworm"
+        },
+        "cordova-plugin-globalization": {
+            "PACKAGE_NAME": "com.testphonegap.comforterworm"
+        },
+        "cordova-plugin-inappbrowser": {
+            "PACKAGE_NAME": "com.testphonegap.comforterworm"
+        },
+        "cordova-plugin-media": {
+            "PACKAGE_NAME": "com.testphonegap.comforterworm"
+        },
+        "cordova-plugin-network-information": {
+            "PACKAGE_NAME": "com.testphonegap.comforterworm"
+        },
+        "cordova-plugin-splashscreen": {
+            "PACKAGE_NAME": "com.testphonegap.comforterworm"
+        },
+        "cordova-plugin-statusbar": {
+            "PACKAGE_NAME": "com.testphonegap.comforterworm"
+        },
+        "cordova-plugin-vibration": {
+            "PACKAGE_NAME": "com.testphonegap.comforterworm"
+        },
+        "cordova-plugin-whitelist": {
+            "PACKAGE_NAME": "com.testphonegap.comforterworm"
+        },
+        "cordova-plugin-admob-free": {
+            "PACKAGE_NAME": "com.testphonegap.comforterworm"
+        }
+    },
+    "dependent_plugins": {
+        "cordova-plugin-file": {
+            "PACKAGE_NAME": "com.testphonegap.comforterworm"
+        },
+        "cordova-promise-polyfill": {
+            "PACKAGE_NAME": "com.testphonegap.comforterworm"
+        },
+        "cordova-admob-sdk": {
+            "PACKAGE_NAME": "com.testphonegap.comforterworm"
+        }
+    }
+}
