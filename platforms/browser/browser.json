@@ -81,6 +81,9 @@
         },
         "cordova-plugin-vibration": {
             "PACKAGE_NAME": "com.testphonegap.comforterworm"
+        },
+        "cordova-plugin-admob-free": {
+            "PACKAGE_NAME": "com.testphonegap.comforterworm"
         }
     },
     "dependent_plugins": {},
@@ -687,6 +690,16 @@
                 "navigator.notification",
                 "navigator"
             ]
+        },
+        {
+            "file": "plugins/cordova-plugin-admob-free/www/admob.js",
+            "id": "cordova-plugin-admob-free.AdMob",
+            "pluginId": "cordova-plugin-admob-free",
+            "clobbers": [
+                "admob",
+                "AdMob",
+                "plugins.AdMob"
+            ]
         }
     ],
     "plugin_metadata": {
@@ -709,6 +722,7 @@
         "cordova-plugin-statusbar": "2.1.3",
         "cordova-plugin-splashscreen": "3.2.2",
         "cordova-plugin-whitelist": "1.2.2",
-        "cordova-plugin-vibration": "2.1.6"
+        "cordova-plugin-vibration": "2.1.6",
+        "cordova-plugin-admob-free": "0.12.1"
     }
 }
