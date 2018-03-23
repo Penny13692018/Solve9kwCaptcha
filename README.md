@@ -3,7 +3,7 @@
 The app is built by replacing the www files in PhoneGap Hello World template with Comforterworm website.
 這個app是用PhoneGap的Hello Wolrd，把www資料夾裡面的東西用comforterworm web版的資源塞進去即可。
 
-Small changes like admob and cordova vibration puglins are added.
+Small changes like admob and cordova vibration plugins are added.
 為了賺$，棉被蟲將web版塞到模板後，還插入了廣告插件。並且發現cordova的震動插件可以讓Android之外的手機震動，
 故也插入了cordova震動插件。
 
