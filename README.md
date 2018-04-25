@@ -1,7 +1,25 @@
 # Solve9kwCaptcha 被蟲賺點數app [![bitHound Score][bithound-img]][bithound-url]
 
+Changes in Version 1.2.5
+Available for solving reCaptcha
+Removed redundant settings such as audio for reCaptcha (not available for mobile), standard reset.
+Files changed--changed contents:
+index.html--Statements about reCaptcha.
+settings.html--Statements about reCaptcha. Audio choice and standard setting choice are removed.
+solve-captcha.html--Refer inappbrowser.js code to show reCaptcha.
+tutor-2001325991259452341665289.html--Statements about help needed by Comforterworm.
+
+getAllSettings.js--Code of removed settings.
+devicecheck.js--Available for reCaptcha, not mobile version lock.
+inappbrowser.js--For showing reCaptcha.
+9kw.js--For showing reCaptcha. See line 1079 and line 1315.
+
+Version 1.2.5 版本變動
+Google"我不是機器人驗證"可以使用了!並移除了一些無用的設定。
+相關文件更動請見上方英文說明，被蟲懶得再打一次中文版~
+
 The app is built by replacing the www files in PhoneGap Hello World template with Comforterworm website.
-這個app是用PhoneGap的Hello Wolrd，把www資料夾裡面的東西用comforterworm web版的資源塞進去即可。
+這個app是用PhoneGap的Hello Wolrd，把www資料夾裡面的東西用comforterworm web版的資源塞進去。
 
 Small changes like admob and cordova vibration plugins are added.
 為了賺$，棉被蟲將web版塞到模板後，還插入了廣告插件。並且發現cordova的震動插件可以讓Android之外的手機震動，

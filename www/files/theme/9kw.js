@@ -1075,26 +1075,14 @@ $(document).ready(function() {
 					captchastop();
 				}
 			}else{
-				if(captchas[captchaid].interactive == 1){
-					$.ajax({
-						url: 'http://127.0.0.1:12345/load/captchaanswer',
-						async: true,
-						cache: false,
-						type: 'GET',
-						dataType: 'text',
-						timeout: 1000,
-						success: function(data, textStatus, request){
-							if(request.status == 200){
-								if(data != ""){
-									$("#input_text").show();
-									$("#input_text").val(data);
-									$("#input_text").hide();
-									captchasend();
-								}
-							}
-						}
-						
-					});
+				if(captchas[captchaid].interactive == 1){				
+					//這裡輸入取得的captcha answer並send出去
+					var answerforcaptcha = CheckCaptchaAnswer();
+					if(answerforcaptcha!="1")
+					{
+						$("#input_text").val(answerforcaptcha);
+						captchasend();						
+					}
 				}
 			}
 
@@ -1306,6 +1294,11 @@ $(document).ready(function() {
 								if(newpageurl == "__undefined__"){
 									newpageurl = "";
 								}
+								if(newpageurl.match("https://") || newpageurl.match("http://"))
+									{newpageurl = newpageurl;}
+								else if(newpageurl.length > 5)
+									{newpageurl = "http://"+newpageurl;}
+								
 								var newuseragent = captchas[key].useragent;
 								if(newuseragent == "__undefined__"){
 									newuseragent = "";
@@ -1319,44 +1312,10 @@ $(document).ready(function() {
 									newcookies = "";
 								}
 								
-								//for debug
-								var fordebug = "";
-
-								//if(newpageurl.match("^https://") || newpageurl.match("^http://") || newpageurl.length > 5){
-									var newsaveobj = {
-										jsondata: rcv2_thing1, 
-										jsoncookies: newcookies, 
-										time: $.now(), source: "9kwclient"
-									};
-								//}
-								//alert(JSON.stringify(newuseragent));
-								//alert(JSON.stringify(newpageurl));
-								//alert(JSON.stringify(newsaveobj));
-
-								$.ajax({
-									type: "POST",
-									async: true,
-									cache: false,
-									url: "http://127.0.0.1:12345/save/captchadata",
-									data: {jsondata: JSON.stringify(newsaveobj)},
-									dataType: 'text',
-									success: function(data, textStatus, request){
-										if(request.status == 200){
-											if(newpageurl.match("https://") || newpageurl.match("http://")){
-												$("#interactivecaptchahtml").html("<span style=\"position:relative;display: inline-block;overflow:visible;height: 200px;\"><iframe nwdisable nwfaketop"+newuseragent+" frameborder=\"0\" scrolling=\"yes\" src=\""+newpageurl+"\" width=\""+$("#widthc").val()+"\" height=\""+$("#heightc").val()+"\"></iframe></span>");
-											}else if(newpageurl.length > 5){
-												$("#interactivecaptchahtml").html("<span style=\"position:relative;display: inline-block;overflow:visible;height: 200px;\"><iframe nwdisable nwfaketop"+newuseragent+" frameborder=\"0\" scrolling=\"yes\" src=\"http://"+newpageurl+"\" width=\""+$("#widthc").val()+"\" height=\""+$("#heightc").val()+"\"></iframe></span>");
-											}else{
-												$("#interactivecaptchahtml").html("<span style=\"position:relative;display: inline-block;overflow:visible;height: 200px;\"><iframe nwdisable nwfaketop"+newuseragent+" frameborder=\"0\" scrolling=\"yes\" src=\"http://127.0.0.1:12345/\" width=\""+$("#widthc").val()+"\" height=\""+$("#heightc").val()+"\"></iframe></span>");
-											}
-																					
-										}
-									
-									},
-									//error: function(jqXHR, textStatus, errorThrown) {alert("Error! Data should get"+JSON.stringify(newsaveobj)+" status: "+request.status); alert(errorThrown);}
-								});
+								//這邊放inappbrowser to show reCaptcha
+								openfreebitcoin(newpageurl, captchas[key].sitekey);
 								
-								$("#interactivecaptchahtml").html(rcv2_thing1);
+								
 							}else{
 								lognumber++;
 								logdata = captchaid + ": " + "No interactive mode found." + "<br>\n" + logdata;

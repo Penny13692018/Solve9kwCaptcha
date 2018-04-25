@@ -18,8 +18,6 @@
 		getCheckSettings("interactivecaptcha");
 		document.getElementById("widthc").value = getCookie('widthc');
 		document.getElementById("heightc").value = getCookie('heightc');
-		getCheckSettings("rc2audio");
-		getCheckSettings("startpre");
 		document.getElementById("autostart").checked = false;
 		document.getElementById("grau").checked = false;
 		document.getElementById("desktopinfo").checked = false;
@@ -49,8 +47,6 @@
 		getCheckSettings("interactivecaptcha");
 		document.getElementById("widthc").value = getCookie('widthc');
 		document.getElementById("heightc").value = getCookie('heightc');
-		getCheckSettings("rc2audio");
-		getCheckSettings("startpre");
 	}
 
 	function getCheckSettings(dataforcheck)

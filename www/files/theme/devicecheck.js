@@ -34,11 +34,11 @@ function detectmob()
  || navigator.userAgent.match(/BlackBerry/i)
  || navigator.userAgent.match(/Windows Phone/i)
  ){
-    setCookie('interactivecaptcha','0','2');
-	setCookie('rc2audio','0','2');
-	alert("Solving reCaptcha not Available for Mobile Version! Please Wait for Update~");
-	document.getElementById("interactivecaptcha").checked = false;
-	document.getElementById("rc2audio").checked = false;
+    //setCookie('interactivecaptcha','0','2');
+	//setCookie('rc2audio','0','2');
+	alert("Solving reCaptcha Now Testing!");
+	//document.getElementById("interactivecaptcha").checked = false;
+	//document.getElementById("rc2audio").checked = false;
 	
   }
  else {
