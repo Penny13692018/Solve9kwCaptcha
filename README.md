@@ -1,10 +1,10 @@
 # Solve9kwCaptcha 被蟲賺點數app [![bitHound Score][bithound-img]][bithound-url]
 
-Changes in Version 1.2.5
+Changes in Version 1.2.6
 Available for solving reCaptcha
 Removed redundant settings such as audio for reCaptcha (not available for mobile), standard reset.
 Files changed--changed contents:
-index.html--Statements about reCaptcha.
+index.html--Statements about reCaptcha, change links to Comforterworm website by using inappbrowser.
 settings.html--Statements about reCaptcha. Audio choice and standard setting choice are removed.
 solve-captcha.html--Refer inappbrowser.js code to show reCaptcha.
 tutor-2001325991259452341665289.html--Statements about help needed by Comforterworm.
@@ -14,7 +14,7 @@ devicecheck.js--Available for reCaptcha, not mobile version lock.
 inappbrowser.js--For showing reCaptcha.
 9kw.js--For showing reCaptcha. See line 1079 and line 1315.
 
-Version 1.2.5 版本變動
+Version 1.2.6 版本變動
 Google"我不是機器人驗證"可以使用了!並移除了一些無用的設定。
 相關文件更動請見上方英文說明，被蟲懶得再打一次中文版~
 
