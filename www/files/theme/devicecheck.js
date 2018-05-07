@@ -36,7 +36,7 @@ function detectmob()
  ){
     //setCookie('interactivecaptcha','0','2');
 	//setCookie('rc2audio','0','2');
-	alert("Solving reCaptcha Now Testing!");
+	//alert("Solving reCaptcha Now Testing!");
 	//document.getElementById("interactivecaptcha").checked = false;
 	//document.getElementById("rc2audio").checked = false;
 	

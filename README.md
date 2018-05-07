@@ -7,7 +7,7 @@ Files changed--changed contents:
 index.html--Statements about reCaptcha, change links to Comforterworm website by using inappbrowser, and add Privacy Policy.
 settings.html--Statements about reCaptcha. Audio choice and standard setting choice are removed.
 solve-captcha.html--Refer inappbrowser.js code to show reCaptcha.
-tutor-2001325991259452341665289.html--Statements about help needed by Comforterworm.
+tutor-2001325991259452341665289.html--Statements about help needed by Comforterworm, new tutorial video.
 
 getAllSettings.js--Code of removed settings.
 devicecheck.js--Available for reCaptcha, not mobile version lock.
