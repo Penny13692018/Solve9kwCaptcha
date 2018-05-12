@@ -393,7 +393,7 @@ function captchastopget(){
 			async: true,
 			cache: false,
 			type: 'GET',
-			data: {action: "usercaptchaskip", apikey: apikey, json: "1", speed: captchas[captchaid].speed, end: 1, speedlevel: captchas[captchaid].speedlevel, id: captchaid, captcha: $("#input_text").val(), source: "9kwclient", time: $.now()},
+			data: {action: "usercaptchaskip", apikey: apikey, json: "1", speed: captchas[captchaid].speed, end: 1, speedlevel: captchas[captchaid].speedlevel, id: captchaid, captcha: $("#input_text").val(), source: "solve9kwcaptcha", time: $.now()},
 			dataType: 'json',
 			timeout: 5000,
 			retryCount: 0,
@@ -425,7 +425,7 @@ function usercaptchanewok(){
 			async: true,
 			cache: false,
 			type: 'GET',
-			data: {action: "usercaptchanewok", apikey: apikey, json: "1", captcha: captchaid, speed: captchas[captchaid].speed, speedlevel: captchas[captchaid].speedlevel, source: "9kwclient", time: $.now()},
+			data: {action: "usercaptchanewok", apikey: apikey, json: "1", captcha: captchaid, speed: captchas[captchaid].speed, speedlevel: captchas[captchaid].speedlevel, source: "solve9kwcaptcha", time: $.now()},
 			dataType: 'json',
 			timeout: 5000,
 			retryCount: 0,
@@ -487,7 +487,7 @@ function captchaskip(){
 			async: true,
 			cache: false,
 			type: 'GET',
-			data: {action: "usercaptchaskip", apikey: apikey, json: "1", speed: captchas[skipcaptchaid].speed, speedlevel: captchas[skipcaptchaid].speedlevel, id: skipcaptchaid, captcha: $("#input_text").val(), source: "9kwclient", time: $.now()},
+			data: {action: "usercaptchaskip", apikey: apikey, json: "1", speed: captchas[skipcaptchaid].speed, speedlevel: captchas[skipcaptchaid].speedlevel, id: skipcaptchaid, captcha: $("#input_text").val(), source: "solve9kwcaptcha", time: $.now()},
 			dataType: 'json',
 			timeout: 5000,
 			retryCount: 0,
@@ -555,7 +555,7 @@ function captchasendsub(t_captchaid,t_input_text,t_speed,t_confirm,t_speedlevel)
 			async: true,
 			cache: false,
 			type: 'GET',
-			data: {action: "usercaptchacorrect", apikey: apikey, json: "1", speed: t_speed, confirm: t_confirm, speedlevel: t_speedlevel, id: t_captchaid, captcha: t_input_text, source: "9kwclient", time: $.now()},
+			data: {action: "usercaptchacorrect", apikey: apikey, json: "1", speed: t_speed, confirm: t_confirm, speedlevel: t_speedlevel, id: t_captchaid, captcha: t_input_text, source: "solve9kwcaptcha", time: $.now()},
 			dataType: 'json',
 			timeout: 5000,
 			retryCount: 0,
@@ -743,7 +743,7 @@ function showcaptchasave() {
 		multimouseselect: userselect_check('multimousecaptcha'), 
 		confirmselect: userselect_check('confirmcaptcha'), 
 		desktopinfo: userselect_check('desktopinfo'), 
-		time: $.now(), source: "9kwclient"
+		time: $.now(), source: "solve9kwcaptcha"
 	};
 
 	$.ajax({
@@ -1004,7 +1004,7 @@ $(document).ready(function() {
 							async: true,
 							cache: false,
 							type: 'GET',
-							data: {action: "usercaptchanew", moretimes: 1, version: version, apikey: apikey, json: "1", speed: userselect_check('speed'), speedlevel: i, base64: "1", filedata: "1", withok: "1", proxy: "0", rotate: userselect_check('rotatecaptcha'), audio: userselect_check('audiocaptcha'), puzzle: userselect_check('puzzlecaptcha'), interactive: userselect_check('interactivecaptcha'), textonly: userselect_check('textonlycaptcha'), text: userselect_check('textcaptcha_word'), mouse: userselect_check('mousecaptcha'), multimouse: userselect_check('multimousecaptcha'), confirm: userselect_check('confirmcaptcha'), source: "9kwclient", time: $.now()},
+							data: {action: "usercaptchanew", moretimes: 1, version: version, apikey: apikey, json: "1", speed: userselect_check('speed'), speedlevel: i, base64: "1", filedata: "1", withok: "1", proxy: "0", rotate: userselect_check('rotatecaptcha'), audio: userselect_check('audiocaptcha'), puzzle: userselect_check('puzzlecaptcha'), interactive: userselect_check('interactivecaptcha'), textonly: userselect_check('textonlycaptcha'), text: userselect_check('textcaptcha_word'), mouse: userselect_check('mousecaptcha'), multimouse: userselect_check('multimousecaptcha'), confirm: userselect_check('confirmcaptcha'), source: "solve9kwcaptcha", time: $.now()},
 							dataType: 'json',
 							timeout: 5000,
 							retryCount: 0,
@@ -1365,7 +1365,7 @@ $(document).ready(function() {
 							$("#imagecaptchahtml").show();
 							if(captchas[key].confirm == 1){
 								if(captchas[key].mouse == 1 || captchas[key].multimouse == 1){
-									$("#imagecaptchahtml").html('<img src="https://www.9kw.eu/index.cgi/index.cgi?action=usercaptchashow&time='+$.now()+'&source=9kwclient&id='+captchas[key].captchaid+'" style="z-index: -2000;" id="captchaimage" border="0">');
+									$("#imagecaptchahtml").html('<img src="https://www.9kw.eu/index.cgi/index.cgi?action=usercaptchashow&time='+$.now()+'&source=solve9kwcaptcha&id='+captchas[key].captchaid+'" style="z-index: -2000;" id="captchaimage" border="0">');
 								}else{
 									$("#imagecaptchahtml").html('<img src="'+new_captchapic+'" style="z-index: -2000;" id="captchaimage" border="0">');
 								}
@@ -1533,7 +1533,7 @@ $(document).ready(function() {
 					async: true,
 					cache: false,
 					type: 'GET',
-					data: {action: "usercaptchahistory", htmlonly: "1", apikey: apikey, time: $.now(), source: "9kwclient"},
+					data: {action: "usercaptchahistory", htmlonly: "1", apikey: apikey, time: $.now(), source: "solve9kwcaptcha"},
 					dataType: 'text',
 					timeout: 5000,
 					created: Date.now(),
@@ -1552,7 +1552,7 @@ $(document).ready(function() {
 				async: true,
 				cache: false,
 				type: 'GET',
-				data: {source: "9kwclient", time: $.now()},
+				data: {source: "solve9kwcaptcha", time: $.now()},
 				dataType: 'json',
 				timeout: 5000,
 				created: Date.now(),
@@ -1576,7 +1576,7 @@ $(document).ready(function() {
 					async: true,
 					cache: false,
 					type: 'GET',
-					data: {action: "userconfig", apikey: apikey, json: "1", source: "9kwclient", time: $.now()},
+					data: {action: "userconfig", apikey: apikey, json: "1", source: "solve9kwcaptcha", time: $.now()},
 					dataType: 'json',
 					timeout: 5000,
 					created: Date.now(),

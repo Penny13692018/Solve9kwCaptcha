@@ -1,8 +1,9 @@
 # Solve9kwCaptcha 被蟲賺點數app [![bitHound Score][bithound-img]][bithound-url]
 
-Changes in Version 1.3.0
+Changes in Version 1.4.0
 Available for solving reCaptcha
 Removed redundant settings such as audio for reCaptcha (not available for mobile), standard reset.
+Bug fix--0036 Source Not Found Error fix.
 
 Files changed--changed contents:
 index.html--Statements about reCaptcha, change links to Comforterworm website by using inappbrowser, and add Privacy Policy.
@@ -15,8 +16,8 @@ devicecheck.js--Available for reCaptcha, not mobile version lock.
 inappbrowser.js--For showing reCaptcha.
 9kw.js--For showing reCaptcha. See line 1079 and line 1315.
 
-Version 1.3.0 版本變動
-Google"我不是機器人驗證"可以使用了!並移除了一些無用的設定。
+Version 1.4.0 版本變動
+Google"我不是機器人驗證"可以使用了!並移除了一些無用的設定。並將0036 9kw API key錯誤修正與修改說明影片~
 相關文件更動請見上方英文說明，被蟲懶得再打一次中文版~
 把隱私權政策加入首頁連結中~
 
